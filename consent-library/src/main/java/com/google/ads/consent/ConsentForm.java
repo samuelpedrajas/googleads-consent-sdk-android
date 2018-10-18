@@ -39,10 +39,8 @@ import com.google.gson.Gson;
 import java.io.ByteArrayOutputStream;
 import java.net.URL;
 import java.util.HashMap;
-<<<<<<< HEAD
 import java.util.Locale;
-=======
->>>>>>> 6503688740bfcb80c48e1713a2d72e5e7e4e73e4
+
 
 /**
  * A Google rendered form for collecting consent from a user.

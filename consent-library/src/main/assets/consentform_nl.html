@@ -740,9 +740,7 @@
 
       // Hide unavailable options.
       var hasValidProviderCount = providersLen > 0;
-      if (hasValidProviderCount) {
-        document.getElementById('providers_count').innerText = providersLen;
-      }
+
       var hasAnyNonPersonalizedOnlyPubId = consentInfo['has_any_npa_pub_id'] || false;
       if (!formInfo['offer_personalized'] ||
           !hasValidProviderCount ||
@@ -844,12 +842,12 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">We hechten veel waarde aan uw privacy en de beveiliging van uw gegevens. Deze app is gratis dankzij de advertenties.</div>
+            <div class="head_intro">We hechten veel waarde aan uw privacy en de beveiliging van uw gegevens.</div>
             <div id="head_question">Mogen onze partners uw gegevens blijven gebruiken om advertenties relevant voor u te maken?</div>
             <div class="head_detail">
               <span id="change_anytime_text1">U kunt in de instellingen van <span class="app_name">App Name</span> uw keuze altijd aanpassen.</span>
-              <span id="head_detail_text">Onze partners verzamelen gegevens en gebruiken een uniek identificatienummer op uw apparaat om u advertenties te tonen.
-                <a href="#" onclick="showProviders();">Meer informatie over hoe <span class="app_name">App Name</span> en onze partners gegevens verzamelen en gebruiken</a>
+              <span id="head_detail_text">
+                <a href="#" onclick="showAppPrivacyPolicy(event);">Meer informatie over hoe onze partners gegevens verzamelen en gebruiken</a>
               </span>
             </div>
           </div>

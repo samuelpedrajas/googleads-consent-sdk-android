@@ -740,9 +740,7 @@
 
       // Hide unavailable options.
       var hasValidProviderCount = providersLen > 0;
-      if (hasValidProviderCount) {
-        document.getElementById('providers_count').innerText = providersLen;
-      }
+
       var hasAnyNonPersonalizedOnlyPubId = consentInfo['has_any_npa_pub_id'] || false;
       if (!formInfo['offer_personalized'] ||
           !hasValidProviderCount ||
@@ -844,12 +842,12 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">Abbiamo a cuore la tua privacy e la sicurezza dei tuoi dati. Gli annunci pubblicitari che mostriamo nell'app ci consentono di offrirla gratuitamente.</div>
+            <div class="head_intro">Abbiamo a cuore la tua privacy e la sicurezza dei tuoi dati.</div>
             <div id="head_question">Accetti che i nostri partner continuino a usare i tuoi dati per personalizzare gli annunci pubblicitari che ti vengono mostrati?</div>
             <div class="head_detail">
               <span id="change_anytime_text1">Puoi modificare la tua scelta per <span class="app_name">App Name</span> in qualsiasi momento dalle impostazioni dell'app.</span>
-<span id="head_detail_text">I nostri partner raccoglieranno dati e utilizzeranno un identificatore univoco sul tuo dispositivo per mostrarti gli annunci pubblicitari.
-                <a href="#" onclick="showProviders();">Scopri in che modo <span class="app_name">App Name</span> e i suoi partner raccolgono e usano i dati</a>
+<span id="head_detail_text">
+                <a href="#" onclick="showAppPrivacyPolicy(event);">Scopri in che modo i suoi partner raccolgono e usano i dati</a>
               </span>
             </div>
           </div>

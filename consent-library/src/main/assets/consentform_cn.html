@@ -740,9 +740,7 @@
 
       // Hide unavailable options.
       var hasValidProviderCount = providersLen > 0;
-      if (hasValidProviderCount) {
-        document.getElementById('providers_count').innerText = providersLen;
-      }
+
       var hasAnyNonPersonalizedOnlyPubId = consentInfo['has_any_npa_pub_id'] || false;
       if (!formInfo['offer_personalized'] ||
           !hasValidProviderCount ||
@@ -844,12 +842,12 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">我们十分重视您的隐私和数据安全。 我们凭借广告赞助，坚持向用户提供免费应用。</div>
+            <div class="head_intro">我们十分重视您的隐私和数据安全。</div>
             <div id="head_question">我们的合作伙伴可否继续使用您的数据，向您推送定制广告？</div>
             <div class="head_detail">
               <span id="change_anytime_text1">您可随时前往应用设置，更改 <span class="app_name">App Name</span> 中的相关选择。</span>
-              <span id="head_detail_text">我们的合作伙伴将收集数据，并为您的设备标注唯一标识符，以向您显示广告。
-                <a href="#" onclick="showProviders();">了解 <span class="app_name">App Name</span> 及其合作伙伴的数据收集和使用方式</a>
+              <span id="head_detail_text">
+                <a href="#" onclick="showAppPrivacyPolicy(event);">了解 其合作伙伴的数据收集和使用方式</a>
               </span>
             </div>
           </div>

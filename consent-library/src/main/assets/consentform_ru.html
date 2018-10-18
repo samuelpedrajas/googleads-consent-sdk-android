@@ -740,9 +740,7 @@
 
       // Hide unavailable options.
       var hasValidProviderCount = providersLen > 0;
-      if (hasValidProviderCount) {
-        document.getElementById('providers_count').innerText = providersLen;
-      }
+
       var hasAnyNonPersonalizedOnlyPubId = consentInfo['has_any_npa_pub_id'] || false;
       if (!formInfo['offer_personalized'] ||
           !hasValidProviderCount ||
@@ -844,12 +842,12 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">Мы заботимся о вашей конфиденциальности и безопасности ваших данных. Чтобы это приложение оставалось бесплатным, мы должны размещать рекламу.</div>
+            <div class="head_intro">Мы заботимся о вашей конфиденциальности и безопасности ваших данных.</div>
             <div id="head_question">Вы согласны, чтобы наши партнеры продолжали использовать ваши данные для показа рекламы по вашим интересам?</div>
             <div class="head_detail">
               <span id="change_anytime_text1">Вы можете изменить свой выбор в любое время для <span class="app_name">App Name</span> в настройках приложения.</span>
-<span id="head_detail_text">Наши партнеры будут собирать данные и использовать уникальный идентификатор на вашем устройстве, чтобы показывать вам рекламу.
-                <a href="#" onclick="showProviders();">Узнайте как <span class="app_name">App Name</span> и наши партнеры собирают и используют ваши данные</a></span>
+<span id="head_detail_text">
+                <a href="#" onclick="showAppPrivacyPolicy(event);">Узнайте как наши партнеры собирают и используют ваши данные</a></span>
             </div>
           </div>
           <div id="buttons" data-sel="">

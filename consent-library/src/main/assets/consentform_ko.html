@@ -740,9 +740,7 @@
 
       // Hide unavailable options.
       var hasValidProviderCount = providersLen > 0;
-      if (hasValidProviderCount) {
-        document.getElementById('providers_count').innerText = providersLen;
-      }
+
       var hasAnyNonPersonalizedOnlyPubId = consentInfo['has_any_npa_pub_id'] || false;
       if (!formInfo['offer_personalized'] ||
           !hasValidProviderCount ||
@@ -844,12 +842,12 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">당사는 프라이버시와 데이터 보안을 소중히 생각합니다. 당사는 광고를 통해서 이 앱을 무료로 제공하고 있습니다.</div>
+            <div class="head_intro">당사는 프라이버시와 데이터 보안을 소중히 생각합니다.</div>
             <div id="head_question">당사의 협력업체가 회원님의 정보를 계속 사용해서 맞춤형 광고를 제공해도 되겠습니까?</div>
             <div class="head_detail">
               <span id="change_anytime_text1">언제든 앱 설정에서 <span class="app_name">App Name</span>에 대한 선택 사항을 변경하실 수 있습니다.</span>
-              <span id="head_detail_text">당사의 협력업체는 데이터를 수집하고 장치에 있는 고유 식별자를 사용해서 광고를 표시합니다.
-                <a href="#" onclick="showProviders();"><span class="app_name">App Name</span> 및 당사의 협력업체가 데이터를 수집 및 이용하는 방법 보기</a>
+              <span id="head_detail_text">
+                <a href="#" onclick="showAppPrivacyPolicy(event);">당사의 협력업체가 데이터를 수집 및 이용하는 방법 보기</a>
               </span>
             </div>
           </div>

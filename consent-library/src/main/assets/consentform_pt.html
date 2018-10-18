@@ -740,9 +740,7 @@
 
       // Hide unavailable options.
       var hasValidProviderCount = providersLen > 0;
-      if (hasValidProviderCount) {
-        document.getElementById('providers_count').innerText = providersLen;
-      }
+
       var hasAnyNonPersonalizedOnlyPubId = consentInfo['has_any_npa_pub_id'] || false;
       if (!formInfo['offer_personalized'] ||
           !hasValidProviderCount ||
@@ -844,12 +842,12 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">Nós preocupamo-nos com a sua privacidade e segurança dos dados. Mantemos esta aplicação gratuita ao mostrar anúncios.</div>
+            <div class="head_intro">Nós preocupamo-nos com a sua privacidade e segurança dos dados.</div>
             <div id="head_question">Os nossos parceiros podem continuar a utilizar os seus dados para adequar os anúncios a si?</div>
             <div class="head_detail">
               <span id="change_anytime_text1">Pode alterar a sua opção a qualquer momento para <span class="app_name">App Name</span> nas definições da aplicação.</span>
-              <span id="head_detail_text">Os nossos parceiros vão recolher dados e utilizar um identificador exclusivo no seu dispositivo para mostrar-lhe anúncios.
-                <a href="#" onclick="showProviders();">Saiba como <span class="app_name">App Name</span> e os nossos parceiros recolhem e utilizam os dados</a>
+              <span id="head_detail_text">
+                <a href="#" onclick="showAppPrivacyPolicy(event);">Saiba como os nossos parceiros recolhem e utilizam os dados</a>
               </span>
             </div>
           </div>
