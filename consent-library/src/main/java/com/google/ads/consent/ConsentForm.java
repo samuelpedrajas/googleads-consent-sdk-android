@@ -279,7 +279,7 @@ public class ConsentForm {
             this.webView.loadUrl("file:///android_asset/consentform_cn.html");
         } else if (lang.equals("de")) {
             this.webView.loadUrl("file:///android_asset/consentform_de.html");
-        } else if (lang.equals("es")) {
+        } else if (lang.equals("es") || lang.equals("eu") || lang.equals("ca") || lang.equals("gl")) {
             this.webView.loadUrl("file:///android_asset/consentform_es.html");
         } else if (lang.equals("fr")) {
             this.webView.loadUrl("file:///android_asset/consentform_fr.html");
