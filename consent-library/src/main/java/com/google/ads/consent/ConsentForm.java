@@ -273,10 +273,16 @@ public class ConsentForm {
 
         this.loadState = LoadState.LOADING;
 
-        Locale loc = context.getResources().getConfiguration().getLocales().get(0);
+        Locale loc;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            loc = context.getResources().getConfiguration().getLocales().get(0);
+        } else {
+            loc = context.getResources().getConfiguration().locale;
+        }
+
         String lang = loc.getLanguage();
-        if (lang.equals("cn")) {
-            this.webView.loadUrl("file:///android_asset/consentform_cn.html");
+        if (lang.equals("zh")) {
+            this.webView.loadUrl("file:///android_asset/consentform_zh.html");
         } else if (lang.equals("de")) {
             this.webView.loadUrl("file:///android_asset/consentform_de.html");
         } else if (lang.equals("es") || lang.equals("eu") || lang.equals("ca") || lang.equals("gl")) {
